@@ -11,7 +11,7 @@ body{
 .content-container{
   background: transparent;
   border: 5px solid gray;
-  max-width: 400px;
+  width: clamp(100px, 100%, 300px);
   margin: 50px auto;
 }
 
@@ -251,9 +251,10 @@ label {
 
 /* Media query for desktop screens */
 @media screen and (min-width: 1024px) {
-  .content-container{
+ .content-container{
     border: 5px solid gray;
-    max-width: 500px;
+    width: clamp(100px, 100%, 500px);
+    margin: 50px auto;
   }
 
   .letter-container{
