@@ -1,0 +1,195 @@
+:root{
+  --cSlate:#cbd5e1;
+  --cSlate800:#1e293b;
+  --cEmerald: #064e3b;
+  --cEmerald500: #10b981;
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/* .container{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid red;
+} */
+
+.content-container{
+  border: 10px ridge var(--cSlate);
+  margin:4rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cSlate800);
+  color:var(--cSlate);
+  width: clamp(100px, 100%, 350px);
+  gap:2rem;
+  /* padding: 10px; */
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:0.5rem;
+  margin-top: 1rem;
+}
+
+.letter-container{
+  /* border: 2px solid pink; */
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Black Ops One', Arial, Helvetica, sans-serif;
+  padding:5px;
+  font-size: 1.5rem;
+  gap: 10px;
+}
+
+.letter-container div{
+  border: 2px solid var(--cSlate);
+  padding: 5px;
+  border-radius: 50%;
+  background: linear-gradient(50deg, var(--cEmerald),var(--cSlate), var(--cEmerald500));
+  background-clip:text;
+  -webkit-background-clip: text;
+  color:transparent
+}
+
+header h4{
+  font-weight: 900;
+}
+
+/* .date-container{
+  border: 2px solid green;
+} */
+
+.main-number-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Black Ops One', Arial, Helvetica, sans-serif;
+  align-items: center;
+  gap: 10px;
+}
+
+.display-number{
+  border: 5px ridge var(--cSlate);
+  width:300px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  margin-block: 3rem;
+}
+.number-option-container{
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+}
+
+.generate-button-con{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.generate-button-con button{
+  padding: 5px;
+  font-family: 'Black Ops One', Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  color:var(--cSlate);
+  position: relative;
+  transition: 1s all;
+  overflow: hidden;
+  border: none;
+}
+
+.generate-button-con button span{
+ position: absolute;
+ display: block;
+}
+
+.generate-button-con button span:nth-child(1){
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cSlate));
+  animation: border1 3s infinite;
+}
+
+@keyframes border1 {
+  0%{left:-100%}
+  100%{left:100%}
+}
+
+.generate-button-con button span:nth-child(2){
+  top: -100%;
+  right:0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--cSlate));
+  animation: border2 3s infinite;
+}
+
+@keyframes border2 {
+  0%{top:-100%}
+  100%{top:100%}
+}
+
+.generate-button-con button span:nth-child(3){
+  bottom:0;
+  right:0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cSlate));
+  animation: border3 3s infinite;
+}
+
+@keyframes border3 {
+  0%{right:-100%}
+  100%{right:100%}
+}
+
+.generate-button-con button span:nth-child(4){
+  bottom:-100%;
+  left:0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--cSlate));
+  animation: border4 3s infinite;
+}
+
+@keyframes border4 {
+  0%{bottom:-100%}
+  100%{bottom:100%}
+}
+
+.generate-button-con button:hover span:nth-child(1),
+.generate-button-con button:hover span:nth-child(2),
+.generate-button-con button:hover span:nth-child(3),
+.generate-button-con button:hover span:nth-child(4){
+  background: linear-gradient(90deg, transparent, var(--cEmerald500));
+}
+
+.alert-message{
+  font-family: 'Black Ops One', Arial, Helvetica, sans-serif;
+  animation: alert 1s ease-in-out infinite;
+}
+
+@keyframes alert {
+  0%{opacity:0}
+  50%{opacity:1}
+  100%{opacity:0}
+}
+
+
+
