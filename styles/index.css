@@ -11,14 +11,7 @@
   box-sizing: border-box;
 }
 
-/* .container{
-  width:100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 2px solid red;
-} */
+
 
 .content-container{
   border: 10px ridge var(--cSlate);
@@ -29,7 +22,7 @@
   align-items: center;
   background-color: var(--cSlate800);
   color:var(--cSlate);
-  width: clamp(100px, 100%, 350px);
+  width: clamp(100px, 100%, 320px);
   gap:2rem;
   /* padding: 10px; */
 }
@@ -65,9 +58,6 @@ header h4{
   font-weight: 900;
 }
 
-/* .date-container{
-  border: 2px solid green;
-} */
 
 .main-number-container{
   display: flex;
@@ -78,14 +68,14 @@ header h4{
 }
 
 .display-number{
-  border: 5px ridge var(--cSlate);
-  width:300px;
+  border: 4px ridge var(--cSlate);
+  width:270px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  font-size: 1.1rem;
+  padding: 1rem;
+  font-size: 1rem;
   margin-block: 3rem;
 }
 .number-option-container{

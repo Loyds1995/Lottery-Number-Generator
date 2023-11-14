@@ -1,9 +1,21 @@
+import { letters } from "./letter.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-
 const today = dayjs().format("dddd, MMMM D, YYYY");
 
 // Display the date in the 'date' element
 document.getElementById("date").textContent = today;
+
+
+let letterHTML = '';
+
+letters.forEach((letter)=>{
+  letterHTML += `<div class="letter">${letter.letter}</div>`;
+});
+
+document.querySelector('.letter-container').innerHTML = letterHTML;
+
+
+
 
 const numberOption = document.querySelector(".number-option-container");
 const generateBtn = document.querySelector(".generate-button");
