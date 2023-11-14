@@ -1,4 +1,5 @@
 import { letters } from "./data/letter.js";
+import { options } from "./data/input.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 const today = dayjs().format("dddd, MMMM D, YYYY");
 
@@ -14,6 +15,25 @@ letters.forEach((letter)=>{
 });
 
 document.querySelector('.letter-container').innerHTML = letterHTML;
+
+// generate input option
+
+const numberOptionContainer = document.querySelector('.number-option-container');
+
+options.forEach((option, index) => {
+  const radioBtn = document.createElement('input');
+  radioBtn.type = "radio";
+  radioBtn.name = "number-option";
+  radioBtn.value = option.value;
+  radioBtn.id = `option${index + 1}`
+
+  const label = document.createElement('label');
+  label.htmlFor = `option${index + 1}`;
+  label.textContent = option.label;
+
+  numberOptionContainer.appendChild(radioBtn);
+  numberOptionContainer.appendChild(label);
+});
 
 
 

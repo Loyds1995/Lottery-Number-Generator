@@ -80,7 +80,9 @@ header h4{
 }
 .number-option-container{
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 10px;
 }
 
