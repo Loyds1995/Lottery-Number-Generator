@@ -107,6 +107,6 @@ resetBtn.addEventListener('click', () => {
   radioBtn.forEach((radioButton) => {
     radioButton.checked = false;
   });
-  displayNumber.textContent = "";
+  displayNumber.textContent = "0";
   displayNumber.classList.remove("alert-message");
 });
