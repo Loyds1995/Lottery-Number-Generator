@@ -1,4 +1,4 @@
-import { letters } from "./letter.js";
+import { letters } from "./data/letter.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 const today = dayjs().format("dddd, MMMM D, YYYY");
 
@@ -6,6 +6,7 @@ const today = dayjs().format("dddd, MMMM D, YYYY");
 document.getElementById("date").textContent = today;
 
 
+// generate the letters to html
 let letterHTML = '';
 
 letters.forEach((letter)=>{
