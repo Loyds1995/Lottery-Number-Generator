@@ -103,7 +103,7 @@ function lotteryNum(range, numCount) {
 
   localStorage.setItem('result', JSON.stringify(result));
 
-  displayNumber.textContent = ""; // Clear any previous alert message
+  displayNumber.textContent = "0"; // Clear any previous alert message
   displayNumber.innerHTML = result.join(" - ");
 }
 
