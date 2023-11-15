@@ -57,7 +57,7 @@ radioBtn.forEach((radioButton) => {
     if (radioButton.checked) {
       selectedOption = radioButton.value;
 
-      displayNumber.textContent = ""; //clear the message when the option is selected
+      displayNumber.textContent = "0"; //clear the message when the option is selected
       displayNumber.classList.remove("alert-message"); // remove the alert-message class
       //change the color back to original color
     }
