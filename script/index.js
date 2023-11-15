@@ -6,6 +6,10 @@ const today = dayjs().format("dddd, MMMM D, YYYY");
 // Display the date in the 'date' element
 document.getElementById("date").textContent = today;
 
+document.addEventListener('DOMContentLoaded', ()=>{
+  let generateNumber = JSON.parse(localStorage.getItem('result')) || [];
+   displayNumber.innerHTML = generateNumber.join(" - ");
+});
 
 // generate the letters to html
 let letterHTML = '';
@@ -96,6 +100,8 @@ function lotteryNum(range, numCount) {
     randomArr[randomNum] = randomArr[range - 1];
     range--;
   }
+
+  localStorage.setItem('result', JSON.stringify(result));
 
   displayNumber.textContent = ""; // Clear any previous alert message
   displayNumber.innerHTML = result.join(" - ");
